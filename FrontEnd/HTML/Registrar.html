@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Usuário</title>
+    <link rel="stylesheet" href="../CSS/cadastro.css">
+    <link rel="stylesheet" href="../CSS/home.css">
+    <script src="../JS/cadastro.js" defer></script>
+</head>
+<body>
+    <header>
+        <a href="Home.html" id="logo">
+          <p>Livraria Silva</p>
+          <img src="../IMG/Logo.jpg" alt="Logo" srcset="" height="90px">
+        </a>
+
+        <div id="userLinks">
+            <a href="Login.html">Entrar</a>
+            <a href="Registrar.html">Registrar</a>
+        </div>
+    </header>
+
+    <main class="cadastro-container">
+        <h1>Cadastro de Usuário</h1>
+        <form action="http://localhost/e-commerce/API/user/createUser.php" method="post">
+            <label for="nome">Nome:</label>
+            <input type="text" id="nome" name="nome" placeholder="Nome completo" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" placeholder="email@gmail.com" required>
+
+            <label for="senha">Senha:</label>
+            <input type="password" id="senha" name="senha" placeholder="Senha" required>
+
+            <label for="nascimento">Data de Nascimento:</label>
+            <input type="date" id="nascimento" name="nascimento" pattern="\d{4}-\d{2}-\d{2}" required>
+
+            <button type="submit">Cadastrar</button>
+
+            <div id="responseMessage"></div>
+        </form>
+    </main>
+</body>
+</html>

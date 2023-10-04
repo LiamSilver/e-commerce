@@ -1,0 +1,32 @@
+@URL = http://localhost/e-commerce/API/author
+
+
+### Criar Autor
+POST {{URL}}/createAuthor.php
+Content-Type: application/json
+
+{
+    "nome": "William Pereira"
+}
+
+### Atualizar um Autor
+POST {{URL}}/updateAuthor.php?id=2
+Content-Type: application/json
+
+{
+    "nome":"Juca de Oliveira"
+}
+
+### Buscar todos os Autor
+GET {{URL}}/getAuthor.php
+
+Content-Type: application/json
+
+### Buscar um Autor pelo ID
+GET {{URL}}/getAuthor.php?id=1
+
+Content-Type: application/json
+
+### Deletar um Autor
+GET {{URL}}/deleteAuthor.php?id=2
+

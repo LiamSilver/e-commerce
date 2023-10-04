@@ -1,0 +1,15 @@
+@URL = http://localhost/e-commerce/API/auth
+
+
+### Testar Login
+POST {{URL}}/login.php
+Content-Type: application/json
+
+{
+    "email": "usuario1@gmail.com",
+    "senha": "123456"
+}
+
+### Decodificar Token
+GET {{URL}}/decodeToken.php?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NCwibm9tZSI6IndpbGxpYW0iLCJlbWFpbCI6IndpbGxpYW1AZ21haWwuY29tIiwic2VuaGEiOiIxMjM0NSIsImlzX2xvZ2dlZF9pbiI6dHJ1ZSwiYWRtaW4iOjB9.wmFznDTgXmE-4-O4LySDrDvSSEODNgNCvjTAa6SL3gE
+Content-Type: application/json

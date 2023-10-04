@@ -1,0 +1,34 @@
+@URL = http://localhost/e-commerce/API/genre/
+
+### Criar Gênero
+
+POST {{URL}}/createGenre.php
+Content-Type: application/json
+
+{
+    "descGenero": "Infantil"
+}
+
+### Buscar todos os Generos
+GET {{URL}}/getGenre.php
+
+Content-Type: application/json
+
+### Buscar um Genero pelo ID
+GET {{URL}}/getGenre.php?id=1
+
+Content-Type: application/json
+
+### Atualizar um Genero
+POST {{URL}}/updateGenre.php?id=1
+Content-Type: application/json
+
+{
+    "descGenero":"Ficcao"
+}
+
+### Deletar um Genero
+GET {{URL}}/deleteGenre.php?id=1
+
+
+

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Carrinho de Compras</title>
+    <link rel="stylesheet" href="../CSS/home.css">
+    <link rel="stylesheet" href="../CSS/compras.css" />
+    <script src="../JS/compras.js" defer></script>
+    <script src="../JS/home.js" defer></script>
+  </head>
+  <body>
+    <header>
+        <a href="Home.html" id="logo">
+            <p>Livraria Silva</p>
+            <img src="../IMG/Logo.jpg" alt="Logo" srcset="" height="90px">
+          </a>
+    
+          <div id="buscaLivro">
+            <div id="barraBusca">
+              <input type="text" placeholder="Pesquisar livros" id="barraBuscaInput" autocomplete="off" onkeydown="verificarTecla(event)"/>
+              <button type="button" onclick="buscarLivro()">Buscar</button>
+            </div>
+            <div id="autoMenu"></div>
+          </div>
+            
+          <div id="userLinks">
+            <a href="compras.html" id="carrinhoLink">
+              <input type="number" name="quantidade" id="contador1" value="0" readonly>
+              <img src="../IMG/carrinho-de-compras.png" alt="Ícone do carrinho">
+            </a>
+            <a href="Login.html" id="entrarLink">Entrar</a>
+            <a href="Registrar.html" id="registrarLink">Registrar</a>
+          </div>    
+    </header>
+
+    <main id="containerCarrinho">
+      <h1>Produtos no Carrinho</h1>
+      <div id="carrinhoProdutos">
+      </div>
+      <button onclick="finalizarPedido()" id="finalizarPedido">Finalizar Pedido</button>
+    </main>
+
+  </body>
+</html>

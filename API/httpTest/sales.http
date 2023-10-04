@@ -1,0 +1,52 @@
+@URL = http://localhost/e-commerce/API/sales/
+
+### Criar venda
+
+POST {{URL}}/createSale.php?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6Mywibm9tZSI6ImFkbWluIiwiZW1haWwiOiJhZG1pbkBnbWFpbC5jb20iLCJzZW5oYSI6ImFkbWluIiwiaXNfbG9nZ2VkX2luIjp0cnVlLCJhZG1pbiI6MX0.RqxYJRSw7tvgj80ZgeUFejnnOf3kLAP4hNss7Jbo2qc
+Content-Type: application/json
+
+{
+  "codUsuario": 3,
+  "valor": 99.99,
+  "dt_compra": "2022-01-01",
+  "itens": [
+    { 
+        "codLivro": 1, 
+        "quantidade": 2,
+        "valorUnitario": 49.99
+     },
+    { 
+        "codLivro": 1, 
+        "quantidade": 2,
+        "valorUnitario": 50.00
+    }
+    ]
+}
+
+### Atualizar uma venda
+POST {{URL}}/updateSale.php?id=3
+Content-Type: application/json
+
+{
+  "codUsuario": 3,
+  "valor": 120.00,
+  "dt_compra": "2022-03-15"
+}
+
+### Buscar todos as vendas
+GET {{URL}}/getSale.php?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6Mywibm9tZSI6ImFkbWluIiwiZW1haWwiOiJhZG1pbkBnbWFpbC5jb20iLCJzZW5oYSI6ImFkbWluIiwiaXNfbG9nZ2VkX2luIjp0cnVlLCJhZG1pbiI6MX0.RqxYJRSw7tvgj80ZgeUFejnnOf3kLAP4hNss7Jbo2qc
+
+Content-Type: application/json
+
+### Buscar as vendas por usuario
+GET {{URL}}/getSaleByUser.php?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwibm9tZSI6IlVzdWFyaW8xIiwiZW1haWwiOiJ1c3VhcmlvMUBnbWFpbC5jb20iLCJzZW5oYSI6IjEyMzQ1NiIsImlzX2xvZ2dlZF9pbiI6dHJ1ZSwiYWRtaW4iOjB9.cGIuybXCDjgRPi--liWRlE-2jW7S66e5qYIEI-qR1E0
+Content-Type: application/json
+
+### Buscar uma venda pelo ID
+GET {{URL}}/getSale.php?id=2
+
+Content-Type: application/json
+
+### Deletar uma venda
+GET {{URL}}/deleteSale.php?id=2
+

@@ -1,0 +1,41 @@
+@URL = http://localhost/e-commerce/API/user
+
+@tokenAdmin = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJub21lIjoiQWRtaW4iLCJlbWFpbCI6IkFkbWluQGdtYWlsLmNvbSIsInNlbmhhIjoiMTIzNDUiLCJpc19sb2dnZWRfaW4iOnRydWUsImFkbWluIjoxfQ.omUsVF5wWBbv6DCg7qKK6Nqpf5V622-jXzFJlQSvHSw
+@tokenSemAdmin = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJub21lIjoiQWRtaW4iLCJlbWFpbCI6IkFkbWluMUBnbWFpbC5jb20iLCJzZW5oYSI6IjEyMzQ1IiwiaXNfbG9nZ2VkX2luIjp0cnVlLCJhZG1pbiI6MH0.GjshtwrvS1LSPMEjgOTSUA3PAzBbjgTFYKlxoHFTM5U
+### Criar usuário
+
+POST {{URL}}/createUser.php
+Content-Type: application/json
+
+{
+    "nome": "Usuário6",
+    "email": "Usuário13@gmail.com",
+    "senha": "12345",
+    "nascimento": "2000-12-13"
+}
+
+### Atualizar um usuário
+POST {{URL}}/updateUser.php?id=5
+Content-Type: application/json
+
+{
+    "nome":"Juca de Oliveira",
+    "email":"jucaoliveira@gmail.com",
+    "senha":"12345",
+    "nascimento":"1999-04-01"
+}
+
+### Buscar todos os usuários
+GET {{URL}}/getUser.php?token={{tokenAdmin}}
+
+Content-Type: application/json
+
+### Buscar um usuário pelo ID
+GET {{URL}}/getUser.php?id=3
+
+Content-Type: application/json
+Authorization: Bearer{{tokenSemAdmin}}
+
+### Deletar um usuário
+GET {{URL}}/deleteUser.php?id=5
+

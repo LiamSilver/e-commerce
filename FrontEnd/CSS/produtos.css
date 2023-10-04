@@ -1,0 +1,128 @@
+body{
+    padding-top: 150px;
+}
+
+#mainProdutos {
+    background-color: #ffffff;
+    border-radius: 5px;
+    box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 45%;
+    margin: 0 auto;
+    color: #2f3c4e;
+    font-size: 16px;
+    text-align: center;
+}
+
+#titulo{
+      font-size: 24px;
+      font-weight: bold;
+      color: #2f3c4e;
+      flex-basis: 100%;
+    }
+
+#mainProdutos img {
+    float: left;
+    margin-top: 15px;
+    margin-left: 5%;
+    width: 250px;
+    height: auto;
+    max-height: 400px;
+  }
+
+  #imagem{
+    border: 2px solid #2f3c4e;
+  }
+#miniContainerInfoLivro{
+    float: right;
+    margin-top: 20%;
+    margin-left: 5%;
+}
+
+.descricao{
+    clear: both;
+    padding-left: 20px;
+    padding-right: 20px;
+    text-align: justify;
+}
+
+
+  #containerCarrinho {
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    order: 6;
+  }
+  
+  #preco{
+    order: 5;
+    margin-top: 10px;
+    font-weight: bold;
+  }
+
+  #containerCarrinho {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    text-align: center;
+    flex-basis: 100%;
+  }
+  
+  #preco{
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+
+  #containerCarrinho input,#containerCarrinho button {
+      margin-top: 10px;
+      font-size: 16px;
+  }
+  #containerCarrinho input {
+    width: 40px;
+    margin-right: 5px;
+    padding: 2px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+  }
+  
+  #containerCarrinho button {
+    background-color: #2f3c4e;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    padding: 5px 10px;
+    cursor: pointer;
+  }
+  
+  #containerCarrinho button:hover {
+    background-color: #1c2733;
+  }
+
+  #containerCarrinho .input-button-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  @media screen and (max-width: 1240px) {
+    #mainProdutos img {
+      margin: 0 auto;
+      width: 200px;
+    }
+
+    #miniContainerInfoLivro {
+        margin: 0 auto;
+        width: 200px;
+      }
+  
+  }
+  
+  @media screen and (max-width: 600px) {
+    #mainProdutos img {
+      margin: 0 auto;
+      width: 150px;
+    }
+  }

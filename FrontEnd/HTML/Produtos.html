@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalhes dos Livros</title>
+    <link rel="stylesheet" href="../CSS/home.css">
+    <link rel="stylesheet" href="../CSS/produtos.css">
+    <script src="../JS/home.js" defer></script>
+    <script src="../JS/produtos.js" defer></script>
+</head>
+<body>
+    <header>
+        <a href="Home.html" id="logo">
+              <p>Livraria Silva</p>
+              <img src="../IMG/Logo.jpg" alt="Logo" srcset="" height="90px">
+        </a>
+  
+        <div id="buscaLivro">
+            <div id="barraBusca">
+              <input type="text" placeholder="Pesquisar livros" id="barraBuscaInput" autocomplete="off" onkeydown="verificarTecla(event)"/>
+              <button type="button" onclick="buscarLivro()">Buscar</button>
+            </div>
+            <div id="autoMenu"></div>
+          </div>
+    
+        <div id="userLinks">
+            <a href="compras.html" id="carrinhoLink">
+              <input type="number" name="quantidade" id="contador" value="0" readonly>
+              <img src="../IMG/carrinho-de-compras.png" alt="Ícone do carrinho">
+            </a>
+            <a href="Login.html" id="entrarLink">Entrar</a>
+            <a href="#" id="registrarLink">Registrar</a>
+          </div>
+      </header>
+  
+      <main id="mainProdutos">
+          
+        <h1 id="titulo">Título do Livro</h1>
+        <img src="#" alt="Capa do livro" id="imagem">
+        <div id="miniContainerInfoLivro">
+            <p id="autor">Autor: Nome do autor</p>
+            <p id="genero">Gênero: Gênero do livro</p>
+            <p id="dataLancamento">Data de Lançamento: 01/01/2022</p>
+        </div>
+        <p class="descricao">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis exercitationem ea aliquid reiciendis, autem repellat amet vero repellendus provident eius. Reiciendis asperiores obcaecati fugiat officia dolorum. Officiis labore quisquam accusamus.</p>
+        <p class="descricao"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis ipsam illum quaerat tenetur omnis voluptates odit similique hic possimus sint, pariatur, tempora, quibusdam exercitationem. Quo, eveniet saepe. Enim, illum aut.</p>
+        <p class="descricao"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis ipsam illum quaerat tenetur omnis voluptates odit similique hic possimus sint, pariatur, tempora, quibusdam exercitationem. Quo, eveniet saepe. Enim, illum aut.</p>
+        
+        <div id="containerCarrinho">
+            <p id="preco">Preço</p>
+            <div class="containerInputButton">
+                <input type="number" min="1" value="1" id="quantidade">
+                <button type="button" id="adicionarAoCarrinho">Adicionar ao Carrinho</button>
+            </div>
+        </div>
+      </main>
+</body>
+</html>

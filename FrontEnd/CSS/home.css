@@ -1,0 +1,263 @@
+body {
+    margin: 0;
+    padding: 0;
+    padding-top: 125px;
+    font-family: Arial, sans-serif;
+    background-color: #f7f7f7;
+  }
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 98%;
+    z-index: 1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #ffffff;
+    box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.1);
+  }
+
+  #logo {
+    position: relative;
+    left: 60px;
+    text-decoration: none;
+  }
+
+  #logo img{
+    position: absolute;
+    top: -25px;
+    z-index: -1;
+  }
+
+  #logo p{
+    padding-left: 15px;
+    padding-top:50px;
+    font-weight: bold;
+    font-size: 18px;
+    color: #2f3c4e;
+    z-index: 1;
+  }
+  #barraBusca {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 800px;
+    height: 40px;
+    background-color: #f2f2f2;
+    border-radius: 5px;
+    margin-right: 10px;
+    border: none;
+    outline: none;
+    padding: 0 10px;
+  }
+
+  #barraBusca input {
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    border: none;
+    outline: none;
+  }
+
+  #barraBusca button {
+    background-color: #2f3c4e;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    height: 100%;
+    padding: 0 20px;
+    margin-left: 20px;
+    cursor: pointer;
+  }
+
+  /* Auto Complete da barra de busca */
+  #autoMenu {
+    position: absolute;
+    background-color: white;
+    border: 1px solid #ddd;
+    border-top: none;
+    z-index: 1;
+    max-height: 200px;
+    overflow-y: auto;
+    width: 100%;
+  }
+
+  #autoMenu ul li{
+    transition: all 0.2s ease-in-out; 
+  }
+
+  #autoMenu li {
+    padding: 8px 12px;
+    cursor: pointer;
+    list-style: none;
+  }
+  
+  #autoMenu li:hover {
+    background-color: #ddd;
+    transform: translateY(-2px); 
+
+  }
+    
+  #userLinks {
+    display: flex;
+    align-items: center;
+  }
+
+  #userLinks a {
+    color: #2f3c4e;
+    text-decoration: none;
+    margin-left: 20px;
+  }
+
+  #carrinhoLink img{
+    width: 25px;
+    height: 25px;
+  }
+  #carrinhoLink input{
+    width: 50px;
+    border: none;
+    font-size: 18px;
+    margin-top: -10px;
+    margin-right: 8px;
+    cursor: pointer;
+}
+
+#contador:focus {
+  outline: none;
+}
+
+  /*Menu Lateral */
+  .containerMenu{
+    float: left;
+    width: 20%;
+    position: fixed;
+    top: 135px;
+    left: 0;
+    z-index: 0;
+    padding-top: 10px;
+  }
+  .menuLateral {
+    width: 100%;
+    background-color: #333;
+    box-sizing: border-box;
+    color: white;
+    padding: 10px;
+    border-bottom: 1px solid #444;
+    overflow: auto;
+    max-height: 300px;
+  }
+  
+  .menuLateral ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    margin-top: 10px;
+  }
+  
+  .menuLateral ul li {
+    font-size: 18px;
+    cursor: pointer;
+    padding: 8px; 
+    border-radius: 4px; 
+    transition: all 0.2s ease-in-out; 
+  }
+  
+  .menuLateral ul li + li {
+    margin-top: 5px;
+     }
+  
+  .menuLateral ul li:hover {
+    background-color: #ccc;
+    color: black;
+    transform: translateY(-2px); 
+  }
+
+  .menuLateral ul li a {
+    color: white;
+    text-decoration: none;
+  }
+  
+  /* Lista de Livros*/
+  .contaiterBooks::after {
+    content: "";
+    display: table;
+    clear: both;
+
+  }
+  .books {
+    float: right;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    width: 70%;
+    padding: 20px;
+  }
+  
+  .books li {
+    flex-basis: calc(20.00% - 10px);
+    background-color: #FFF;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    overflow: hidden;
+    margin-bottom: 20px;
+  }
+    
+  .books li img {
+    width: 100%;
+    max-height: 150px;
+    object-fit: fill;
+    cursor: pointer;
+  }
+    
+  .books li h3 {
+    font-size: 18px;
+    margin: 10px;
+  }
+  
+  .books li p {
+    font-size: 16px;
+    margin: 10px;
+  }
+ 
+  .bookItem {
+    flex-basis: 30%;
+    margin-bottom: 30px;
+    position: relative;
+  }
+
+  .error {
+    color: red;
+    font-weight: bold;
+  }
+  
+ /* Media queries */
+/* Media queries */
+@media only screen and (max-width: 1330px) {
+  #logo {
+    display: none;
+  }
+
+  #barraBusca {
+    width: 100%;
+    margin-right: 0;
+    font-size: 14px; 
+  }
+
+  #userLinks {
+    margin-right: 0;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .menuLateral {
+    display: none;
+  }
+
+  #barraBusca {
+    font-size: 12px;
+  }
+}
+

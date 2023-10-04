@@ -1,0 +1,59 @@
+@URL = http://localhost/e-commerce/API/book/
+
+### Criar livro
+
+POST {{URL}}/createBook.php
+Content-Type: application/json
+
+{
+  "codAutor": 1,
+  "codGenero": 2,
+  "descLivro": "Livro de teste 2",
+  "preco": 29.90,
+  "quantidade": 10,
+  "dt_lancamento": "2022-01-01"
+}
+
+### Atualizar um livro
+POST {{URL}}/updateBook.php?id=2
+Content-Type: application/json
+
+{
+  "codAutor": 1,
+  "codGenero": 3,
+  "descLivro": "Teste de Atualização",
+  "preco": 39.90,
+  "quantidade": 20,
+  "dt_lancamento": "2022-02-15"
+}
+### Buscar todos os livros
+GET {{URL}}/getBook.php
+
+Content-Type: application/json
+
+### Buscar um livro pelo ID
+GET {{URL}}/getBook.php?id=1
+
+Content-Type: application/json
+
+### Buscar um livro pelo genero
+GET {{URL}}/getBookByGenre.php?genre=fantasia
+
+Content-Type: application/json
+
+### Buscar um livro pelo autor
+GET {{URL}}/getBookByAuthor.php?author=Stephen King
+
+Content-Type: application/json
+
+### Deletar um livro
+GET {{URL}}/deleteBook.php?id=5
+
+### Buscar livros pelas iniciais
+GET {{URL}}/getBookbyLetter.php?name=harry
+Content-Type: application/json
+
+### Buscar livros pelo nome
+GET {{URL}}/getBookbyName.php?livro=o iluminado
+Content-Type: application/json
+

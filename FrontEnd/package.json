@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "faker": "^6.6.6",
+    "jwt-decode": "^3.1.2"
+  }
+}

@@ -1,0 +1,23 @@
+body {
+    padding-top: 125px;
+  }
+  #logo {
+    position: relative;
+    left: 60px;
+    text-decoration: none;
+  }
+
+  #logo img{
+    position: absolute;
+    top: -25px;
+    z-index: -1;
+  }
+
+  #logo p{
+    padding-left: 15px;
+    padding-top:50px;
+    font-weight: bold;
+    font-size: 18px;
+    color: #2f3c4e;
+    z-index: 1;
+  }

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="../CSS/login.css">
+    <link rel="stylesheet" href="../CSS/home.css">
+    <script src="../JS/login.js" defer></script>
+</head>
+<body>
+    <header>
+        <a href="Home.html" id="logo">
+          <p>Livraria Silva</p>
+          <img src="../IMG/Logo.jpg" alt="Logo" srcset="" height="90px">
+        </a>
+  
+        <div id="userLinks">
+            <a href="Login.html">Entrar</a>
+            <a href="Registrar.html">Registrar</a>
+          </div>
+        </header>
+        
+        <main class="login-container">
+            <h1>Login</h1>
+            <form action="http://localhost/e-commerce/API/auth/login.php" method="post">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" placeholder="email@gmail.com" required>
+              
+                <label for="senha">Senha:</label>
+                <input type="password" id="senha" name="senha" placeholder="Senha" required>
+                  
+                <div id="containerMostrarSenha">
+                    <label for="mostrarSenha">Mostrar senha</label>
+                    <input type="checkbox" id="mostrarSenha">
+                </div>
+                
+                <button type="submit">Entrar</button>
+
+                <div id="responseMessage"></div>
+
+              </form>
+        </main>
+</body>
+</html>
